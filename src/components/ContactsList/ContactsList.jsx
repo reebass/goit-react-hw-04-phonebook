@@ -2,16 +2,6 @@ import { ContactItem } from 'components/ContactItem/ContactItem';
 import PropTypes from 'prop-types';
 import { Item, List } from './ContactsList.styled';
 
-Event.PropTypes = {
-  arrContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }).isRequired
-  ),
-  onDeleteContacts: PropTypes.func,
-};
 
 export const ContactList = ({ arrContacts, onDeleteContacts }) => {
   return (
@@ -29,3 +19,16 @@ export const ContactList = ({ arrContacts, onDeleteContacts }) => {
     </List>
   );
 };
+
+
+ContactList.propTypes = {
+  arrContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+  onDeleteContacts: PropTypes.func,
+};
+

@@ -4,6 +4,7 @@ export const Button = styled.button`
   margin: 0;
   padding: 5px 10px;
   border: 0;
+  outline: 0;
   border-radius: 4px;
   color: currentColor;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,

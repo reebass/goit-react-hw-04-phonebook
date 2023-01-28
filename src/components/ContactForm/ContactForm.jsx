@@ -12,16 +12,6 @@ import {
   InputNumber,
 } from './ContactForm.styled';
 
-Event.PropTypes = {
-  onSubmit: PropTypes.func.isRequired,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }).isRequired
-  ),
-};
 
 let schema = yup.object().shape({
   name: yup.string().required(),
@@ -123,4 +113,16 @@ export const ContactForm = ({ onSubmit, contacts }) => {
       )}
     </Formik>
   );
+};
+
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    }).isRequired
+  ),
 };

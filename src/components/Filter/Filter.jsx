@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
 import { Label, InputFilter } from './Filter.styled';
 
-Event.PropTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-};
+
 
 export const Filter = ({ value, onChange }) => {
   return (
@@ -14,4 +11,9 @@ export const Filter = ({ value, onChange }) => {
       <InputFilter type="text" value={value} onChange={onChange} />
     </Label>
   );
+};
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };
